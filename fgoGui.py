@@ -11,7 +11,6 @@ class MyMainWindow(QMainWindow):
     def runFunc(self,func,*args,**kwargs):
         self.ui.BTN_ONEBATTLE.setEnabled(False)
         self.ui.BTN_MAIN.setEnabled(False)
-        self.ui.BTN_STOP.setEnabled(True)
         setInfo(self.ui.TXT_INFO.text())
         def f():
             try:
@@ -20,7 +19,6 @@ class MyMainWindow(QMainWindow):
                 beep()
                 self.ui.BTN_ONEBATTLE.setEnabled(True)
                 self.ui.BTN_MAIN.setEnabled(True)
-                self.ui.BTN_STOP.setEnabled(False)
         self.thread=threading.Thread(target=f)
         self.thread.start()
     def loadData(self,x):

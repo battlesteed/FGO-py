@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(146, 179)
+        MainWindow.resize(117, 144)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -30,21 +30,16 @@ class Ui_MainWindow(object):
         self.BTN_MAIN = QtWidgets.QPushButton(self.centralwidget)
         self.BTN_MAIN.setObjectName("BTN_MAIN")
         self.verticalLayout.addWidget(self.BTN_MAIN)
-        self.BTN_STOP = QtWidgets.QPushButton(self.centralwidget)
-        self.BTN_STOP.setEnabled(False)
-        self.BTN_STOP.setObjectName("BTN_STOP")
-        self.verticalLayout.addWidget(self.BTN_STOP)
         self.verticalLayout_2.addLayout(self.verticalLayout)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 146, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 117, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
         self.BTN_ONEBATTLE.clicked.connect(MainWindow.runOneBattle)
         self.BTN_MAIN.clicked.connect(MainWindow.runMain)
-        self.BTN_STOP.clicked.connect(MainWindow.stopThread)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -52,4 +47,3 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.BTN_ONEBATTLE.setText(_translate("MainWindow", "单次战斗"))
         self.BTN_MAIN.setText(_translate("MainWindow", "清空体力"))
-        self.BTN_STOP.setText(_translate("MainWindow", "停止运行"))

@@ -4,8 +4,8 @@ For English, Goto [readme_en.md](https://github.com/hgjazhgj/FGO-py/blob/master/
 > 国服居然比同期日服早10天开活动!  
 
 # "智能战斗不间断,不靠礼装不用拐"的FGO全自动脚本  
-当前版本v2.10.10  
-readme比代码长,所以想知道脚本怎么用还是先看代码吧...  
+当前版本v2.11.0beta  
+readme不是最新的  
 GitHub项目地址:[https://github.com/hgjazhgj/FGO-py/](https://github.com/hgjazhgj/FGO-py/)  
 快速跳转:[版本记录](#版本记录-Version-Logs)  
 当前版本更新很快,因此**不建议fork**  
@@ -101,10 +101,11 @@ setInfo等函数就是为了避免对源程序的频繁修改,所以我也不打
 承接上文,我自知这个脚本功能过于强大,强大到了严重影响游戏平衡,改变游戏性质,急剧扩大玩家间差异的程度.就算是在GitHub上开源我都是下了决心的.2019年刚过,B站up主[MCLAREN--](https://space.bilibili.com/13033022)搞了一套硬件来在iOS上跑脚本,虽然他的代码就是"三回合代码",硬件也非常简单,但他似乎是第一个做出来的,反正人家就是比我勤快([视频](https://www.bilibili.com/video/av82095192),[专栏](https://www.bilibili.com/read/cv4303413),[GitHub](https://github.com/McLaren12345/FGO_Bluetooth_Assistant)).注意到**硬件不被B站的条款限制** (虽然法律还是会管的),所以等我什么时候有空了,就搞一套差不多的硬件,只要把我的脚本底层交互接口从adb到伺服电机这么一改,然后新瓶装旧酒,挂羊头卖狗肉地出个视频既可以让网友们看到我的脚本,又不怕帐号被封,岂不美哉!  
 GitHub上从来不缺有思想有执行力的程序员,希望这个脚本能越写越好,祈祷这个世界再无BUG.  
 # 版本记录 Version Logs  
-## 2020/02/10 v2.10.10  
+## 2020/02/11 v2.11.0beta
+我打算开始写ui了  
+## 2020/01/31 v2.10.10  
 代码结构更改,无实质性变化  
 我才发现函数定义本身就是可以挤在一行里面的  
-
 ## 2020/01/30 v2.10.9  
 加入英文readme  
 <del>xjb乱写了一个ui之后说不定用得上</del>本来想搞个ui的但是测试到一半发现比直接改代码麻烦得多,就不搞了...但是今后可能会向代码中添加一些接口以便ui访问  
