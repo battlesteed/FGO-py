@@ -4,7 +4,7 @@ For English, Goto [readme_en.md](https://github.com/hgjazhgj/FGO-py/blob/master/
 > 国服居然比同期日服早10天开活动!  
 
 # "智能战斗不间断,不靠礼装不用拐"的FGO全自动脚本  
-当前版本v3.0.0  
+当前版本v3.1.1  
 GitHub项目地址:[https://github.com/hgjazhgj/FGO-py/](https://github.com/hgjazhgj/FGO-py/)  
 快速跳转:[版本记录](#版本记录-Version-Logs)  
 当前版本更新很快,因此**不建议fork**  
@@ -52,7 +52,9 @@ email huguangjing0411@geektip.cc
 **`houguInfo`列表记录了宝具的信息**  
 `houguInfo[编队中的第i个从者]=[的宝具的最小使用stage数,在该stage的最小使用回合数,优先级(越小越优先)]`  
 **`dangerPos`代表各stage的优先攻击位置**  
-**`friendPos`代表好友在几号位**
+右到左依次为dangerPos0-2,当boss血条与小兵血条不在同一行内时(魔伊,鬼岛,罗生门,FA,柱子,etc.)第二行的三个位置为dangerPos3-5  
+**`friendPos`代表好友在几号位**  
+从0开始编号  
 ## 助战 Friends  
 你需要事先将你期望的各种助战的样子截图为png放在asserts/friend下,参照asserts/friend/unused中的文件,如果asserts/friend目录下没有文件,就选取好友列表中的第一个  
 **被截图范围都应该可以点击来选中该好友**,实际的点击位置为图片的正中央  
@@ -89,6 +91,11 @@ setInfo等函数就是为了避免对源程序的频繁修改,所以我也不打
 承接上文,我自知这个脚本功能过于强大,强大到了严重影响游戏平衡,改变游戏性质,急剧扩大玩家间差异的程度.就算是在GitHub上开源我都是下了决心的.2019年刚过,B站up主[MCLAREN--](https://space.bilibili.com/13033022)搞了一套硬件来在iOS上跑脚本,虽然他的代码就是"三回合代码",硬件也非常简单,但他似乎是第一个做出来的,反正人家就是比我勤快([视频](https://www.bilibili.com/video/av82095192),[专栏](https://www.bilibili.com/read/cv4303413),[GitHub](https://github.com/McLaren12345/FGO_Bluetooth_Assistant)).注意到**硬件不被B站的条款限制** (虽然法律还是会管的),所以等我什么时候有空了,就搞一套差不多的硬件,只要把我的脚本底层交互接口从adb到伺服电机这么一改,然后新瓶装旧酒,挂羊头卖狗肉地出个视频既可以让网友们看到我的脚本,又不怕帐号被封,岂不美哉!  
 GitHub上从来不缺有思想有执行力的程序员,希望这个脚本能越写越好,祈祷这个世界再无BUG.  
 # 版本记录 Version Logs  
+## 2020/02/12 v3.1.1  
+bug修复:保证setForeground能正常执行  
+优化:修改了Key映射,以应对boss血条与小兵血条不在一行里的情况,从上到下从右到左依次为dangerPos0-5,按键为小键盘9-4  
+优化:你可以看见你点过哪个编队按钮  
+"一个控制台窗口+一个ui"的布局基本确定,我希望移动动其中一个窗口时另一个跟着动  
 ## 2020/02/12 v3.1.0  
 功能移植  
 在以前版本中,我可以一边挂脚本一边修改代码,因为代码会在执行开始时全部载入内存  
