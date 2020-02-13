@@ -216,7 +216,7 @@ def oneBattle():
                 time.sleep(2)
                 while not Check(.2).isTurnBegin():pass
             doit(' ',(2250,))
-            doit((lambda chk:(lambda c,h:([chr(i+54)for pri in{houguInfo[i][1]for i in servant if i<6}for i in(0,1,2)if h[i]and houguInfo[servant[i]][1]==pri]if any(h)else[chr(j+49)for i in(0,1,2)if c.count(i)>=3for j in(0,1,2,3,4)if c[j]==i])+[chr(j+49)for i in(0,2,1,-1)for j in(0,1,2,3,4)if c[j]==i])(chk.getABQ(),(lambda h:[h[i]and houguInfo[servant[i]][0]>=stage for i in(0,1,2)])(chk.isHouguReady())))(Check())[:3],(100,100,10000))
+            doit((lambda chk:(lambda c,h:([chr(i+54)for pri in{houguInfo[i][1]for i in servant if i<6}for i in(0,1,2)if h[i]and houguInfo[servant[i]][1]==pri]if any(h)else[chr(j+49)for i in(0,1,2)if c.count(i)>=3for j in(0,1,2,3,4)if c[j]==i])+[chr(j+49)for i in(0,2,1,-1)for j in(0,1,2,3,4)if c[j]==i])(chk.getABQ(),(lambda h:[h[i]and stage>=houguInfo[servant[i]][0]for i in(0,1,2)])(chk.isHouguReady())))(Check())[:3],(100,100,10000))
         elif chk.isBattleOver():
             printer('  Battle Finished')
             break
