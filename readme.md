@@ -1,7 +1,7 @@
 > 满破苍玉get!
 
 # "智能战斗不间断,不靠礼装不用拐"的FGO全自动脚本  
-当前版本v3.1.4  
+当前版本v3.1.5  
 开学快乐  
 虚拟机vmwareWorkstation 模拟器Bluestacks 虚拟摄像头e2eSoftVCam 虚拟声卡e2eSoftVSC 已就绪  
 GitHub项目地址:[https://github.com/hgjazhgj/FGO-py/](https://github.com/hgjazhgj/FGO-py/)  
