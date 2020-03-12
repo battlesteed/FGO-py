@@ -1,6 +1,6 @@
 'Full-automatic FGO Script'
 __author__='hgjazhgj'
-import time,os,numpy,cv2,functools
+import time,os,numpy,cv2,re,functools
 from airtest.core.android.android import Android
 from airtest.core.android.constant import CAP_METHOD,ORI_METHOD
 IMG_APEMPTY=cv2.imread('image/apempty.png')
@@ -44,8 +44,7 @@ class Fuse:
 fuse=Fuse()
 class Base(Android):
     def __init__(self,serialno=None):
-        try:
-            super().__init__(serialno,cap_method=CAP_METHOD.JAVACAP,ori_method=ORI_METHOD.ADB)
+        try:super().__init__(serialno,cap_method=CAP_METHOD.JAVACAP,ori_method=ORI_METHOD.ADB)
         except:
             self.serialno=None
             return
@@ -97,7 +96,7 @@ def chooseFriend():
             chk=Check(.3)
             for name,img in functools.filter(lambda img:chk.tapOnCmp(img,delta=.015),IMG_FRIEND):
                 printer('  Friend:',name)
-                try:p=re.match('[0-9x]{11}$',name).group()
+                try:p=re.search('[0-9x]{11}$',name,re.I).group()
                 except AttributeError:pass
                 else:
                     skillInfo[friendPos]=[[skillInfo[friendPos][i][j]if p[i*3+j]=='x'else int(p[i*3+j])for j in range(3)]for i in range(3)]
